@@ -13,7 +13,7 @@ void KeyGen () {
  cout << "Choice difficulty: 4, 6 or 8" << endl;
  std::cout << "0-Exit\n";
  std::cout << "====================================\n";
- getch(std::cin, a);
+ getline(std::cin, a);
  if (a == "4") {
   four ();
   goto go;
@@ -27,7 +27,7 @@ void KeyGen () {
   std::cout << "Exit to menu? 1)Yes, 2)No\n";
   std::cout << "====================================\n";
   getline(std::cin, b)
-  if (b == "1") {						
+  if (b == "1") {
    goto end;
   } else if (b == "2"){
    goto go;
