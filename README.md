@@ -7,5 +7,5 @@
    * Для Fedora: `sudo yum install gcc` или `sudo dnf install gcc`.<br>
    Чтобы скомпилировать исходный код просто запустите `./build`.
   ### Windows
-   * Убедитесь что компилятор установлен: `gcc --version`. Если компилятор не стоит, то вот [гайд](https://programforyou.ru/poleznoe/kak-ustanovit-gcc-dlya-windows).<br>
+   * Убедитесь что компилятор установлен: `gcc --version`. Если компилятор не установлен, то вот [гайд](https://programforyou.ru/poleznoe/kak-ustanovit-gcc-dlya-windows).<br>
    Для компиляции запустите `build.bat`.
