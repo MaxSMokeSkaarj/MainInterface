@@ -56,12 +56,12 @@ void MathCore(std::string arr[]) {
   std::stringstream ssb(b);
   double db = 0.0;
   ssb >> db;
-  std::cout << "Tangens " + b + " = " << tan(db) << std::endl;
+  std::cout << "Tangent " + b + " = " << tan(db) << std::endl;
  } else if(a == "log"){
   std::stringstream ssb(b);
   double db = 0.0;
   ssb >> db;
-  std::cout << "Logarifm " + b + " = " << log(db) << std::endl;
+  std::cout << "Logarithm " + b + " = " << log(db) << std::endl;
  } else {
  std::cout << "Error 102\n";
  };
