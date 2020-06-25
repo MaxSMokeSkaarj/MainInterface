@@ -21,12 +21,12 @@ void KeyGen () {
   eight();
   goto go;
  } else if (a == "e" || a == "E") {
-  std::cout << "Exit to menu? 1)Yes, 2)No\n";
+  std::cout << "Exit to menu? y/N\n";
   std::cout << "====================================\n";
   getline(std::cin, b);
-  if (b == "1") {
+  if (b == "y" || b == "Y") {
    goto end;
-  } else if (b == "2"){
+  } else if (b == "n" || b == "N"){
    goto go;
   } else {
    std::cout << "Error 301\n";
