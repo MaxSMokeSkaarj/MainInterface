@@ -85,7 +85,7 @@ void stringProcessor(std::string line)
 
 void calc() {
  std::cout << "====================================\n";
- std::cout << "MainInterfase v1.6 by KillSZ\n";
+ std::cout << "MainInterface v1.6 by KillSZ\n";
  std::cout << "====================================\n";
  back:
  std::cout << "Input a mathematical example...\nInput 'e' to exit\n";
