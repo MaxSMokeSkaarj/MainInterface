@@ -1,6 +1,3 @@
-/*
-   KeyGen by MaxSMoke/KillSZ v1.3
-*/
 #ifndef KEYGEN_H
 #define KEYGEN_H
 #include <iostream>
@@ -11,7 +8,7 @@ void KeyGen () {
  std::cout << "====================================\n";
  go:
  cout << "Choice difficulty: 4, 6 or 8" << endl;
- std::cout << "0-Exit\n";
+ std::cout << "Type 'e' to exit\n";
  std::cout << "====================================\n";
  getline(std::cin, a);
  if (a == "4") {
