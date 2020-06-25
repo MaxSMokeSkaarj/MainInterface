@@ -7,7 +7,7 @@
 #include <cstdlib>
 #include "modules.h"
 void KeyGen () {
- int a,b;
+ std::string a,b;
  std::cout << "====================================\n";
  go:
  cout << "Choice difficulty: 4, 6 or 8" << endl;
@@ -26,7 +26,7 @@ void KeyGen () {
  } else if (a == "e" || a == "E") {
   std::cout << "Exit to menu? 1)Yes, 2)No\n";
   std::cout << "====================================\n";
-  getline(std::cin, b)
+  getline(std::cin, b);
   if (b == "1") {
    goto end;
   } else if (b == "2"){
