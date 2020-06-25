@@ -7,7 +7,7 @@ void KeyGen () {
  std::string a,b;
  std::cout << "====================================\n";
  go:
- cout << "Choice difficulty: 4, 6 or 8" << endl;
+ std::cout << "Choice difficulty: 4, 6 or 8\n";
  std::cout << "Type 'e' to exit\n";
  std::cout << "====================================\n";
  getline(std::cin, a);
