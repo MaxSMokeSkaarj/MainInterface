@@ -16,4 +16,4 @@
    * Убедитесь что компилятор установлен: `gcc --version`. Если компилятор не установлен, то вот [гайд](https://programforyou.ru/poleznoe/kak-ustanovit-gcc-dlya-windows).<br>
    Для компиляции запустите `build.bat`.<br/>
    
-Спасибо [Алексею Дебрскому](https://t.me/debrsky) [Артёму Худякову](https://t.me/bruhLinkToMe) за дополнение
+Спасибо [Алексею Дебрскому](https://t.me/debrsky) и [Артёму Худякову](https://t.me/bruhLinkToMe) за дополнение
