@@ -10,8 +10,7 @@
  ### MacOS
    * Установите компилятор из brew или macports.<br/>
    Для компиляции запустите `./build CC=clang CXX=clang++ LD=ld.lld`
- ### OpenBSD
-   * Установите из pkg: `pkg install gcc` или соберите из портов<br/>
+ ### FreeBSD
    Чтобы скомпилировать, введите `./build CC=clang CXX=clang++ LD=ld.lld`
  ### Windows
    * Убедитесь что компилятор установлен: `gcc --version`. Если компилятор не установлен, то вот [гайд](https://programforyou.ru/poleznoe/kak-ustanovit-gcc-dlya-windows).<br>
