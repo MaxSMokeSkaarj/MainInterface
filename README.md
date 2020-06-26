@@ -1,11 +1,20 @@
 Относительно бесполезная программа на С++, моя первая програма на этом яп.
 ## Инструкция:
- ### Unix:
+ ### * nix:
    Убедитесь что компилятор установлен: `gcc --version`. Если компилятор не стоит, то:
    * Для диструбтивов, основаных на Debian: `sudo apt install gcc`.
-   * Для диструбтивов, основаных на Archlinux: `sudo pacman -s gcc`.
-   * Для Fedora: `sudo yum install gcc` или `sudo dnf install gcc`.<br>
+   * Для Archlinux и основаных на нем: `sudo pacman -S base-devel`.
+   * Для Rhel(Fedora, centos и т.п): `sudo yum install gcc`.
+   * Для Void: `xbps-install gcc`.<br>
    Чтобы скомпилировать исходный код просто запустите `./build`.
-  ### Windows
+ ### MacOS
+   * Установите компилятор из brew или macports.<br/>
+   Для компиляции запустите `./build CC=clang CXX=clang++ LD=ld.lld`
+ ### OpenBSD
+   * Установите из pkg: `pkg install gcc` или соберите из портов<br/>
+   Чтобы скомпилировать, введите `./build CC=clang CXX=clang++ LD=ld.lld`
+ ### Windows
    * Убедитесь что компилятор установлен: `gcc --version`. Если компилятор не установлен, то вот [гайд](https://programforyou.ru/poleznoe/kak-ustanovit-gcc-dlya-windows).<br>
-   Для компиляции запустите `build.bat`.
+   Для компиляции запустите `build.bat`.<br/>
+   
+Спасибо [Артёму Худякову](vk.com/id536068342) за дополнение
