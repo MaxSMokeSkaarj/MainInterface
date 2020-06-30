@@ -76,7 +76,7 @@ void MathCore(std::string arr[]) {
   ssc >> dc;
   std::cout << a + " ^ " + c + " = " << pow(da, dc) << std::endl;
  } else {
- std::cout << "Error 102\n";
+ std::cout << "Error 202\n";
  };
 };
 
