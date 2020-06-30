@@ -5,7 +5,6 @@ structure*/
 #include <iostream>
 #include <cmath>
 #include <cstdlib>
-using namespace std;
 //calculator
 void MathCore(std::string arr[]) {
  std::string a = arr[0];
@@ -68,6 +67,14 @@ void MathCore(std::string arr[]) {
   double db = 0.0;
   ssb >> db;
   std::cout << "Square root " + b + " = " << sqrt(db) << std::endl;
+ } else if (b == "^" || b == "in") {
+ std::stringstream ssa(a);
+  std::stringstream ssc(c);
+  double da = 0.0;
+  double dc = 0.0;
+  ssa >> da;
+  ssc >> dc;
+  std::cout << a + " ^ " + c + " = " << pow(da, dc) << std::endl;
  } else {
  std::cout << "Error 102\n";
  };
@@ -91,16 +98,13 @@ void stringProcessor(std::string line)
 
 //keygen
 void four () {
-cout << "4-numberic code: " << 1000 + rand() % 1000 << endl;
-cout << "====================================" << endl;
+std::cout << "4-numberic code: " << 1000 + rand() % 1000 << std::endl;
 }
 void six () {
-cout << "6-numberic code: " << 100000 + rand() % 100000 << endl;
-cout << "====================================" << endl;
+std::cout << "6-numberic code: " << 100000 + rand() % 100000 << std::endl;
 }
 void eight () {
-cout << "8-numberic code: " << 10000000 + rand() % 10000000 << endl;
-cout << "====================================" << endl;
+std::cout << "8-numberic code: " << 10000000 + rand() % 10000000 << std::endl;
 }
 //converter
 
