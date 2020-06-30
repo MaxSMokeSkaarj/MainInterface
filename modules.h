@@ -63,6 +63,11 @@ void MathCore(std::string arr[]) {
   double db = 0.0;
   ssb >> db;
   std::cout << "Logarithm " + b + " = " << log(db) << std::endl;
+ } else if (a == "sqrt" || a == "√") {
+   std::stringstream ssb(b);
+  double db = 0.0;
+  ssb >> db;
+  std::cout << "Square root " + b + " = " << sqrt(db) << std::endl;
  } else {
  std::cout << "Error 102\n";
  };
