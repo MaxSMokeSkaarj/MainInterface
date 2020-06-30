@@ -91,7 +91,6 @@ void stringProcessor(std::string line)
   iss >> subs;
   arr[i]= subs;
   i++;
-  //std:: cout << "Substring: " << arr[i] << std::endl;
  } while (iss);
  MathCore(arr);
 };
