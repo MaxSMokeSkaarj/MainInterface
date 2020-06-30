@@ -17,8 +17,8 @@ int main() {
 		std::cout << "Not work...\n";
 		//shell();
 	} else if (a == "E" || a == "e") {
-		cout << "Exit? y/N\n";
-		cin >> b;
+		std::cout << "Exit? y/N\n";
+		getline(std::cin, b);
 		if (b == "Y" || b == "y") {
 			goto end;
 		} else if (b == "n" || b == "N") {
