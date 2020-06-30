@@ -17,7 +17,7 @@ int main() {
 		std::cout << "Not work...\n";
 		//shell();
 	} else if (a == "E" || a == "e") {
-		cout << "Exit? y/N\n====================================\n";
+		cout << "Exit? y/N\n";
 		cin >> b;
 		if (b == "Y" || b == "y") {
 			goto end;
@@ -25,10 +25,9 @@ int main() {
 			goto again;
 		} else {
 			std::cout << "Error 101\n";
-			std::cout << "====================================\n";
 		}
 	} else {
-		std::cout << "Error 102\n====================================\n";
+		std::cout << "Error 102\n";
 	}
 	goto again;
 	end:
