@@ -22,7 +22,7 @@ void calc() {
   } else if (chc == "N" || chc == "n") {
    std::cout << "Aborting...\n";
   } else {
-   std::cout << "Error 101\n";
+   std::cout << "Error 201\n";
   }
  };
  stringProcessor(in);
