@@ -62,6 +62,11 @@ void MathCore(std::string arr[]) {
   double db = 0.0;
   ssb >> db;
   std::cout << "Logarithm " + b + " = " << log(db) << std::endl;
+ } else if (a == "ctg") {
+  std::stringstream ssb(b);
+  double db = 0.0;
+  ssb >> db;
+  std::cout << "Cotangent " + b + " = " << 1/tan(db) << std::endl;
  } else if (a == "sqrt" || a == "√") {
    std::stringstream ssb(b);
   double db = 0.0;
@@ -75,6 +80,11 @@ void MathCore(std::string arr[]) {
   ssa >> da;
   ssc >> dc;
   std::cout << a + " ^ " + c + " = " << pow(da, dc) << std::endl;
+ } else if (a == "cbrt" || a == "√^3") {
+  std::stringstream ssb(b);
+  double db = 0.0;
+  ssb >> db;
+  std::cout << "Cube root " + b + " = " << cbrt(db) << std::endl;
  } else {
  std::cout << "Error 202\n";
  };
