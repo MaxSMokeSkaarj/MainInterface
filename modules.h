@@ -89,7 +89,7 @@ void MathCore(std::string arr[]) {
   std::stringstream ssb(b);
   double db = 0.0;
   ssb >> db;
-  std::cout << " Module " + b + " = " << abs(db) << std::endl;
+  std::cout << "Module " + b + " = " << abs(db) << std::endl;
 } else {
  std::cout << "Error 202\n";
 };
