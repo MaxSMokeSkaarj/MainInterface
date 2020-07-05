@@ -85,9 +85,14 @@ void MathCore(std::string arr[]) {
   double db = 0.0;
   ssb >> db;
   std::cout << "Cube root " + b + " = " << cbrt(db) << std::endl;
- } else {
+} else if ((a == "|" && c == "|") || a == "abs") { 
+  std::stringstream ssb(b);
+  double db = 0.0;
+  ssb >> db;
+  std::cout << " Module " + b + " = " << abs(db) << std::endl;
+} else {
  std::cout << "Error 202\n";
- };
+};
 };
 
 void stringProcessor(std::string line)
