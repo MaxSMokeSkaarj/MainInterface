@@ -90,6 +90,11 @@ void MathCore(std::string arr[]) {
         double db = 0.0;
         ssb >> db;
         std::cout << "Module " + b + " = " << abs(db) << std::endl;
+    } else if (a == "log10") {
+        std::stringstream ssb(b);
+        double db = 0.0;
+        ssb >> db;
+        std::cout << "Decimal logarithm " + b + " = " << log10(db) << std::endl;
     } else {
         std::cout << "Error 202\n";
     };
