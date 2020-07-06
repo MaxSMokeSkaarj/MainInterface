@@ -16,7 +16,6 @@ int main() {
     } else if (a == "2") {
         KeyGen();
     } else if (a == "3") {
-        std::cout << "Not work...\n";
         conv();
     } else if (a == "E" || a == "e") {
         std::cout << "Exit? y/N\n";
