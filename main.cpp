@@ -3,6 +3,7 @@
 #include <cstdlib>
 #include "calc.h"
 #include "keygen.h"
+#include "conv.h"
 int main() {
     std::string a,
     b;
@@ -16,7 +17,7 @@ int main() {
         KeyGen();
     } else if (a == "3") {
         std::cout << "Not work...\n";
-        //shell();
+        conv();
     } else if (a == "E" || a == "e") {
         std::cout << "Exit? y/N\n";
         getline(std::cin, b);
