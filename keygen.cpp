@@ -6,7 +6,6 @@
 int four();
 int six();
 int eight();
-  
 
 int KeyGen() {
   
