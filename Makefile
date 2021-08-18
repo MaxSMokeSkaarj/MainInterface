@@ -12,4 +12,5 @@ releaseObjects:
 	$(CPP) $(CFLAGSRLS) $< -o $@
 debugObjects:
 	$(CPP) $(CFLAGSDBG) $< -o $@
-CLEAN
+clean:
+	rm -rf *.0 MI
