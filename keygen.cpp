@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 
-int KeyGen () {
+int KeyGen() {
   std::string a,
   b;
   while (true) {
