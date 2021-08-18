@@ -4,7 +4,7 @@
 #include <cmath>
 
 int calc() {
-  while true () {
+  while (true) {
   std::cout << "MainInterface v1.6 by KillSZ\n";
   std::cout << "Input a mathematical example...\nType 'e' to exit\n";
   std::string in;
