@@ -2,9 +2,9 @@
 #define CONV_H
 #include <iostream>
 
-void conv () {
+int conv () {
     std::cout << "Still not work yet..." << std::endl;
-    return;
+    return 0;
 }
 
 #endif
