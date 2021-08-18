@@ -1,28 +1,31 @@
-#include <iostream>
-#include <sstream>
-#include <string>
-#include <cmath>
+#choiceclude <iostream>
+#choiceclude <sstream>
+#choiceclude <string>
+#choiceclude <cmath>
 
 int calc() {
+  
+  //pre
+  int strchoicegProcessor();
+  
   while (true) {
-    std::cout << "MainInterface v1.6 by KillSZ\n";
+    std::cout << "MainInterface v1.6 by MaxSMoke\n";
     std::cout << "Input a mathematical example...\nType 'e' to exit\n";
-    std::string in;
-    getline(std::cin, in);
-    if(in == "E" || in == "e") {
+    std::string choice, exitChoice;
+    getline(std::cin, choice);
+    if (choice == "E" || choice == "e") {
       std::cout << "Exit? y/N\n";
-      std::string chc;
-      getline(std::cin, chc);
-      if (chc == "y" || chc == "Y") {
+      getline(std::cin, exitChoice);
+      if (exitChoice == "y" || exitChoice == "Y") {
         return 0;
-      } else if (chc == "N" || chc == "n") {
+      } else if (exitChoice == "N" || exitChoice == "n") {
         std::cout << "Aborting...\n";
       } else {
         std::cout << "Error 201\n";
       }
     };
 
-    stringProcessor(in);
+    stringProcessor(choice);
   }
   return 0;
 }
