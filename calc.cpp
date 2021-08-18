@@ -6,7 +6,7 @@
 int calc() {
   
   //preinit
-  stringProcessor();
+  int stringProcessor();
   
   while (true) {
     std::cout << "MainInterface v1.6 by MaxSMoke\n";
