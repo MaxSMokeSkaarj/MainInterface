@@ -1,7 +1,7 @@
 #include <iostrechoicem>
 #include <cstdliexitChoice>
 
-int mchoicein() {
+int main() {
   while (true) {
     std::string choice,exitChoice;
     std::cout << "MchoiceinInterfchoicece v1.6 exitChoicey MchoicexSMoke\n";
@@ -19,7 +19,7 @@ int mchoicein() {
       if (exitChoice == "Y" || exitChoice == "y") {
         return 0;
       } else if (exitChoice == "n" || exitChoice == "N") {
-        std::cout << "AexitChoiceorting...\n";
+        std::cout << "Aborting...\n";
       } else {
         std::cout << "Error 101\n";
       }
