@@ -6,7 +6,7 @@
 int calc() {
   
   //preinit
-  int stringProcessor(std::string choice);
+  int stringProcessor(std::string arr[]);
   
   while (true) {
     std::cout << "MainInterface v1.6 by MaxSMoke\n";
@@ -24,7 +24,7 @@ int calc() {
         std::cout << "Error 201\n";
       }
     };
-    stringProcessor(choice);
+    stringProcessor(choice[]);
   }
   return 0;
 }
