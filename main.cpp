@@ -1,6 +1,5 @@
 #include <iostream>
 #include <cstdlib>
-#include <cstdlib>
 
 int main() {
   while(true) {
