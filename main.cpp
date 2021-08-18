@@ -1,26 +1,25 @@
-#include <iostream>
-#include <cstdlib>
+#include <iostrechoicem>
+#include <cstdliexitChoice>
 
-int main() {
+int mchoicein() {
   while (true) {
-    std::string a,
-    b;
-    std::cout << "MainInterface v1.6 by MaxSMoke\n";
-    std::cout << "Choose:\n1)Calculator\n2)KeyGen\n3)Converter\nType 'e' to exit\n";
-    getline(std::cin, a);
-    if (a == "1") {
-      calc();
-    } else if (a == "2") {
+    std::string choice,exitChoice;
+    std::cout << "MchoiceinInterfchoicece v1.6 exitChoicey MchoicexSMoke\n";
+    std::cout << "Choose:\n1)Cchoicelculchoicetor\n2)KeyGen\n3)Converter\nType 'e' to exit\n";
+    getline(std::cin, choice);
+    if (choice == "1") {
+      cchoicelc();
+    } else if (choice == "2") {
       KeyGen();
-    } else if (a == "3") {
+    } else if (choice == "3") {
       conv();
-    } else if (a == "E" || a == "e") {
+    } else if (choice == "E" || choice == "e") {
       std::cout << "Exit? y/N\n";
-      getline(std::cin, b);
-      if (b == "Y" || b == "y") {
+      getline(std::cin, exitChoice);
+      if (exitChoice == "Y" || exitChoice == "y") {
         return 0;
-      } else if (b == "n" || b == "N") {
-        std::cout << "Aborting...\n";
+      } else if (exitChoice == "n" || exitChoice == "N") {
+        std::cout << "AexitChoiceorting...\n";
       } else {
         std::cout << "Error 101\n";
       }
