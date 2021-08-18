@@ -4,11 +4,6 @@
 
 int KeyGen() {
 
-  //pre
-  four();
-  six();
-  eight();
-
   while (true) {
     std::string choice, exitChoice;
     std::cout << "Choice difficulty: 4, 6 or 8\n";
