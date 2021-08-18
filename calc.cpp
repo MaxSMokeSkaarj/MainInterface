@@ -6,9 +6,9 @@
 #include <string>
 #include <cmath>
 
-void calc() {
+int calc() {
+  while true () {
   std::cout << "MainInterface v1.6 by KillSZ\n";
-  back:
   std::cout << "Input a mathematical example...\nType 'e' to exit\n";
   std::string in;
   getline(std::cin, in);
@@ -17,7 +17,7 @@ void calc() {
     std::string chc;
     getline(std::cin, chc);
     if (chc == "y" || chc == "Y") {
-      goto exit;
+      return 0;
     } else if (chc == "N" || chc == "n") {
       std::cout << "Aborting...\n";
     } else {
@@ -26,8 +26,7 @@ void calc() {
   };
 
   stringProcessor(in);
-  goto back;
-  exit:
-  return;
+  }
+  return 0;
 }
 #endif
