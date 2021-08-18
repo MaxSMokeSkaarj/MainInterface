@@ -6,7 +6,7 @@
 int calc() {
   
   //pre
-  int strchoicegProcessor();
+  int stringProcessor();
   
   while (true) {
     std::cout << "MainInterface v1.6 by MaxSMoke\n";
