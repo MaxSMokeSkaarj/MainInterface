@@ -5,9 +5,9 @@
 int main() {
   
   //preinit
-  calc();
-  KeyGen();
-  conv();
+  int calc();
+  int KeyGen();
+  int conv();
   
   while (true) {
     std::string choice,exitChoice;
