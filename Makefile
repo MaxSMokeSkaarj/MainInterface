@@ -4,11 +4,12 @@ OBJ=$(SRC:.cpp=.o)
 CFLAGSRLS=-O2 -s -flto
 CFLAGSDBG=-Og -g
 LDFLAGS=
-RELEASE: $(OBJ) $(RLSOBJ)
+release: $(OBJ) $(releaseObjects)
 	$(CPP) $(LDFLAGS) $(OBJ) -o $@
-DEBUG: $(OBJ) $(DBGOBJ)
+debug: $(OBJ) $(debugObjects)
 	$(CPP) $(LDFLAGS) $(OBJ) -o $@
-RLSOBJ:
+releaseObjects:
 	$(CPP) $(CFLAGSRLS) $< -o $@
-DBGOBJ:
+debugObjects:
 	$(CPP) $(CFLAGSDBG) $< -o $@
+CLEAN
