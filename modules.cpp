@@ -100,6 +100,7 @@ int MathCore(std::string arr[]) {
   } else {
     std::cout << "Error 202\n";
   };
+  return 0;
 };
 
 int stringProcessor(std::string line) {
