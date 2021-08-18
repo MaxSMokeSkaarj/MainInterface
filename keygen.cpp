@@ -2,8 +2,7 @@
 #include <cstdlib>
 
 int KeyGen() {
-  std::string a,
-  b;
+  std::string a,b;
   while (true) {
     std::cout << "Choice difficulty: 4, 6 or 8\n";
     std::cout << "Type 'e' to exit\n";
