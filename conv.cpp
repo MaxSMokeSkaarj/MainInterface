@@ -1,5 +1,3 @@
-#ifndef CONV_H
-#define CONV_H
 #include <iostream>
 
 int conv () {
@@ -7,4 +5,3 @@ int conv () {
     return 0;
 }
 
-#endif
