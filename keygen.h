@@ -3,6 +3,7 @@
 #include <iostream>
 #include <cstdlib>
 #include "modules.h"
+
 void KeyGen () {
     std::string a,
     b;
@@ -37,4 +38,5 @@ void KeyGen () {
         return;
     }
 }
+
 #endif
