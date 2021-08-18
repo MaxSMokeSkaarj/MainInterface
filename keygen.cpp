@@ -20,7 +20,7 @@ int KeyGen() {
       if (b == "y" || b == "Y") {
         return 0;
       } else if (b == "n" || b == "N") {
-        //nothing to do
+        std::cout << "Aborting...\n";
       } else {
         std::cout << "Error 301\n";
       }
