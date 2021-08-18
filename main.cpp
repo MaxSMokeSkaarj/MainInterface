@@ -4,6 +4,7 @@
 #include "calc.h"
 #include "keygen.h"
 #include "conv.h"
+
 int main() {
     std::string a,
     b;
