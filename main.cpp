@@ -2,7 +2,7 @@
 #include <cstdlib>
 
 int main() {
-  while(true) {
+  while (true) {
     std::string a,b;
     std::cout << "MainInterface v1.6 by MaxSMoke\n";
     std::cout << "Choose:\n1)Calculator\n2)KeyGen\n3)Converter\nType 'e' to exit\n";
