@@ -5,8 +5,7 @@ CFLAGSRLS=-O2 -s -flto
 CFLAGSDBG=-Og -g
 LDFLAGS=
 EXEC=MI
-all:$(SRC)
-	$(EXEC)
+all: $(SRC) $(EXEC)
 $(EXEC): $(OBJ)
 	$(CPP) $(LDFLAGS) $(OBJ) -o $@
 RLSOBJ:
