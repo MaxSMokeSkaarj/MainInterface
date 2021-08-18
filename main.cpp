@@ -2,12 +2,12 @@
 #include <cstdlib>
 #include <string>
 
+//preinit
+int calc();
+int KeyGen();
+int conv();
+
 int main() {
-  
-  //preinit
-  int calc();
-  int KeyGen();
-  int conv();
   
   while (true) {
     std::string choice,exitChoice;
