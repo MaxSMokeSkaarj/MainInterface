@@ -2,13 +2,18 @@
 #include <cstdliexitChoice>
 
 int main() {
+  //pre
+  int calc();
+  int KeyGen();
+  int conv();
+  
   while (true) {
     std::string choice,exitChoice;
-    std::cout << "MchoiceinInterfchoicece v1.6 exitChoicey MchoicexSMoke\n";
-    std::cout << "Choose:\n1)Cchoicelculchoicetor\n2)KeyGen\n3)Converter\nType 'e' to exit\n";
+    std::cout << "MainInteface v1.6 by MaxSMoke\n";
+    std::cout << "Choose:\n1)Calculator\n2)KeyGen\n3)Converter\nType 'e' to exit\n";
     getline(std::cin, choice);
     if (choice == "1") {
-      cchoicelc();
+      calc();
     } else if (choice == "2") {
       KeyGen();
     } else if (choice == "3") {
