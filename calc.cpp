@@ -3,10 +3,10 @@
 #include <string>
 #include <cmath>
 
+//preinit
+int stringProcessor(std::string example);
+
 int calc() {
-  
-  //preinit
-  int stringProcessor(std::string example);
   
   while (true) {
     std::cout << "MainInterface v1.6 by MaxSMoke\n";
