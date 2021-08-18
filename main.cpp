@@ -1,9 +1,6 @@
 #include <iostream>
 #include <cstdlib>
 #include <cstdlib>
-#include "calc.h"
-#include "keygen.h"
-#include "conv.h"
 
 int main() {
   while(true) {
