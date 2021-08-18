@@ -12,7 +12,7 @@ void MathCore(std::string arr[]) {
   std::string a = arr[0];
   std::string b = arr[1];
   std::string c = arr[2];
-  if(b == "+") {
+  if (b == "+") {
     std::stringstream ssa(a);
     std::stringstream ssc(c);
     double da = 0.0;
