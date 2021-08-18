@@ -102,7 +102,7 @@ int MathCore(std::string arr[]) {
   };
 };
 
-void stringProcessor(std::string line) {
+int stringProcessor(std::string line) {
   std::string s = line;
   std::istringstream iss(s);
   int i = 0;
@@ -114,18 +114,22 @@ void stringProcessor(std::string line) {
     i++;
   } while (iss);
   MathCore(arr);
+  return 0;
 };
 
 //keygen
 
-void four () {
+int four () {
   std::cout << "4-numberic code: " << 1000 + rand() % 1000 << std::endl;
+  return 0;
 }
-void six () {
+int six () {
   std::cout << "6-numberic code: " << 100000 + rand() % 100000 << std::endl;
+  return 0;
 }
-void eight () {
+int eight () {
   std::cout << "8-numberic code: " << 10000000 + rand() % 10000000 << std::endl;
+  return 0;
 }
 
 //converter
