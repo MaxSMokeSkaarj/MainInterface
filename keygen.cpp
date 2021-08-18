@@ -5,9 +5,9 @@
 int KeyGen() {
   
   //preinit
-  four();
-  six();
-  eight();
+  int four();
+  int six();
+  int eight();
   
   while (true) {
     std::string choice, exitChoice;
