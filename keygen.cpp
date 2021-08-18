@@ -3,14 +3,19 @@
 #include <string>
 
 int KeyGen() {
-
+  
+  //preinit
+  four();
+  six();
+  eight();
+  
   while (true) {
     std::string choice, exitChoice;
     std::cout << "Choice difficulty: 4, 6 or 8\n";
     std::cout << "Type 'e' to exit\n";
     getline(std::cin, choice);
     if (choice == "4") {
-      four ();
+      four();
     } else if (choice == "6") {
       six();
     } else if (choice == "8") {
