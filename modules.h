@@ -5,7 +5,9 @@ structure*/
 #include <iostream>
 #include <cmath>
 #include <cstdlib>
+
 //calculator
+
 void MathCore(std::string arr[]) {
     std::string a = arr[0];
     std::string b = arr[1];
@@ -115,6 +117,7 @@ void stringProcessor(std::string line) {
 };
 
 //keygen
+
 void four () {
     std::cout << "4-numberic code: " << 1000 + rand() % 1000 << std::endl;
 }
@@ -124,6 +127,7 @@ void six () {
 void eight () {
     std::cout << "8-numberic code: " << 10000000 + rand() % 10000000 << std::endl;
 }
+
 //converter
 
 #endif

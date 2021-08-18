@@ -25,6 +25,7 @@ void calc() {
             std::cout << "Error 201\n";
         }
     };
+
     stringProcessor(in);
     goto back;
     exit:
