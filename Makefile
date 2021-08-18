@@ -13,4 +13,4 @@ releaseObjects:
 debugObjects:
 	$(CPP) $(CFLAGSDBG) $< -o $@
 clean:
-	rm -rf *.0 MI
+	rm -rf *.o MI
