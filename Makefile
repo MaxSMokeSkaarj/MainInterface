@@ -11,3 +11,5 @@ $(EXEC): $(OBJ)
 	$(CPP) $(LDFLAGS) $(OBJ) -o $@
 RLSOBJ:
 	$(CPP) $(CFLAGSRLS) $< -o $@
+DBGOBJ:
+	$(CPP) $(CFLAGSDBG) $< -o $@
