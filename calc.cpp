@@ -5,7 +5,6 @@
 #include <sstream>
 #include <string>
 #include <cmath>
-#include "modules.h"
 
 void calc() {
   std::cout << "MainInterface v1.6 by KillSZ\n";
