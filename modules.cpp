@@ -1,7 +1,5 @@
 /*Its all function file from module
 structure*/
-#ifndef FUNC_H
-#define FUNC_H
 #include <iostream>
 #include <cmath>
 #include <cstdlib>
@@ -129,5 +127,3 @@ void eight () {
 }
 
 //converter
-
-#endif
