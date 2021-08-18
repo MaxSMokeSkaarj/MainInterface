@@ -1,8 +1,5 @@
-GPP=g++
-CLANGPP=clang++
-FLG=-o main
-SRC=main.cpp calc.cpp keygen.cpp conv.cpp modules.cpp
-gcc: $(SRC)
-	$(GPP) $(FLG) $(SRC)
+CPP:=g++
+gcc: main-gcc calc-gcc keygen-gcc conv-gcc modules-gcc
+	$(GPP) -o mai
 clang: $(SRC)
 	$(CLANGPP) $(FLG) $(SRC)
