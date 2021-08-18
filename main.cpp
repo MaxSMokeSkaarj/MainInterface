@@ -4,11 +4,6 @@
 
 int main() {
   
-  //pre
-  int calc();
-  int KeyGen();
-  int conv();
-  
   while (true) {
     std::string choice,exitChoice;
     std::cout << "MainInteface v1.6 by MaxSMoke\n";
