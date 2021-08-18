@@ -5,6 +5,9 @@
 
 int calc() {
   
+  //preinit
+  stringProcessor();
+  
   while (true) {
     std::cout << "MainInterface v1.6 by MaxSMoke\n";
     std::cout << "Input a mathematical example...\nType 'e' to exit\n";
@@ -21,7 +24,6 @@ int calc() {
         std::cout << "Error 201\n";
       }
     };
-
     stringProcessor(choice);
   }
   return 0;
