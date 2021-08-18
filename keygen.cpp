@@ -2,7 +2,6 @@
 #define KEYGEN_H
 #include <iostream>
 #include <cstdlib>
-#include "modules.h"
 
 void KeyGen () {
     std::string a,
