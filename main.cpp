@@ -3,10 +3,8 @@
 
 int main() {
   while(true) {
-    std::string a,
-    b;
+    std::string a,b;
     std::cout << "MainInterface v1.6 by MaxSMoke\n";
-    again:
     std::cout << "Choose:\n1)Calculator\n2)KeyGen\n3)Converter\nType 'e' to exit\n";
     getline(std::cin, a);
     if (a == "1") {
