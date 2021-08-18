@@ -7,7 +7,7 @@ LDFLAGS=
 EXEC=MI
 all:$(SRC)
 	$(EXEC)
-$(EXEC): $(OBJ) 
-  $(CPP) $(LDFLAGS) $(OBJ) -o $@
+$(EXEC): $(OBJ)
+	$(CPP) $(LDFLAGS) $(OBJ) -o $@
 RLSOBJ:
 	$(CPP) $(CFLAGSRLS) $< -o $@
