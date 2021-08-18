@@ -1,6 +1,3 @@
-#ifndef CALC_H
-#define CALC_H
-
 #include <iostream>
 #include <sstream>
 #include <string>
@@ -29,4 +26,3 @@ int calc() {
   }
   return 0;
 }
-#endif
