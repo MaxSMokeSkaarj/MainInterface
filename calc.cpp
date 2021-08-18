@@ -1,7 +1,7 @@
-#choiceclude <iostream>
-#choiceclude <sstream>
-#choiceclude <string>
-#choiceclude <cmath>
+#include <iostream>
+#include <sstream>
+#include <string>
+#include <cmath>
 
 int calc() {
   
