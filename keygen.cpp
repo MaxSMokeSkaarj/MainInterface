@@ -2,13 +2,15 @@
 #include <cstdlib>
 #include <string>
 
+//preinit
+int four();
+int six();
+int eight();
+  
+
 int KeyGen() {
   
-  //preinit
-  int four();
-  int six();
-  int eight();
-  
+
   while (true) {
     std::string choice, exitChoice;
     std::cout << "Choice difficulty: 4, 6 or 8\n";
