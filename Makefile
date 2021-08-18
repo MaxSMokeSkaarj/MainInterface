@@ -8,9 +8,9 @@ release: $(releaseObjects)
 	$(CPP) $(LDFLAGS) $(OBJ) -o $@
 debug: $(debugObjects)
 	$(CPP) $(LDFLAGS) $(OBJ) -o $@
-releaseObjects: $(OBJ)
+releaseObjects: $(SRC)
 	$(CPP) $(CFLAGSRLS) $< -o $@
-debugObjects:$(OBJ)
+debugObjects: $(SRC)
 	$(CPP) $(CFLAGSDBG) $< -o $@
 clean:
 	rm -rf *.o release debug
