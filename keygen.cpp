@@ -1,5 +1,3 @@
-#ifndef KEYGEN_H
-#define KEYGEN_H
 #include <iostream>
 #include <cstdlib>
 
@@ -31,5 +29,3 @@ int KeyGen () {
     }
   }
 }
-
-#endif
