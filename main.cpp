@@ -22,7 +22,7 @@ int main() {
     std::cout << "Exit? y/N\n";
     getline(std::cin, b);
     if (b == "Y" || b == "y") {
-      goto end;
+      return 0;
     } else if (b == "n" || b == "N") {
       goto again;
     } else {
@@ -32,6 +32,5 @@ int main() {
     std::cout << "Error 102\n";
   }
   goto again;
-  end:
   return 0;
 }
