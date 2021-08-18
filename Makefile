@@ -11,6 +11,6 @@ debug: $(debugObjects)
 releaseObjects: $(SRC)
 	$(CPP) $(CFLAGSRLS) $< -o $@
 debugObjects: $(SRC)
-	$(CPP) $(CFLAGSDBG) $< -o $@
+	$(CPP) $(CFLAGSDBG) $< -o $<.o
 clean:
 	rm -rf *.o release debug
