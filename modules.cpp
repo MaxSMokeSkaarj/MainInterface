@@ -4,6 +4,7 @@ structure*/
 #include <cmath>
 #include <cstdlib>
 #include <string>
+#include <sstream>
 
 //calculator
 
