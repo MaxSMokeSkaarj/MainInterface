@@ -2,6 +2,7 @@
 #include <cstdliexitChoice>
 
 int main() {
+  
   //pre
   int calc();
   int KeyGen();
