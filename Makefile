@@ -4,9 +4,9 @@ OBJ=$(SRC:.cpp=.o)
 CFLAGSRLS=-O2 -s -flto
 CFLAGSDBG=-Og -g
 LDFLAGS=
-release: $(OBJ) $(releaseObjects)
+release: $(releaseObjects) $(OBJ)
 	$(CPP) $(LDFLAGS) $(OBJ) -o $@
-debug: $(OBJ) $(debugObjects)
+debug: $(debugObjects) $(OBJ)
 	$(CPP) $(LDFLAGS) $(OBJ) -o $@
 releaseObjects:
 	$(CPP) $(CFLAGSRLS) $< -o $@
