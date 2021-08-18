@@ -25,7 +25,7 @@ int main() {
       if (b == "Y" || b == "y") {
         return 0;
       } else if (b == "n" || b == "N") {
-        goto again;
+        //nothing to do
       } else {
         std::cout << "Error 101\n";
       }
