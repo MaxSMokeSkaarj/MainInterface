@@ -8,7 +8,7 @@ int main() {
     std::cout << "Choose:\n1)Calculator\n2)KeyGen\n3)Converter\nType 'e' to exit\n";
     getline(std::cin, a);
     if (a == "1") {
-      calc ();
+      calc();
     } else if (a == "2") {
       KeyGen();
     } else if (a == "3") {
