@@ -157,55 +157,54 @@ double calc(queue<char> in) {
       cout << "Please enter the variable \'" << var_buf << "\': ";
       cin >> res.top();
       mem[var_buf] = res.top();
-    }
-  } else if(in.front() == ';' || is_oper(in.front()) == true) {
-    if(minus == true) {
-      minus = false;
-      res.top() = -res.top();
-    }
-    if(in.front() == ';') {
-      res.push(0.0);
-      in.pop();
-    } else if(res.size() > 1) {
-      temp = res.top();
-      res.pop();
-      switch(in.front()) {
-        case '+':
-          res.top() += temp;
-          break;
-        case '-':
-          res.top() -= temp;
-          break;
-        case '*':
-          res.top() *= temp;
-          break;
-        case '/':
-          res.top() /= temp;
-          break;
-        case '^':
-          res.top() = pow(res.top(), temp);
-          break;
-        case 'sin':
-          res.top() = sin(res(top));
-          break;
-        case 'cos':
-          res.top() = cos(res.top());
-          break;
-        case 'tan':
-          res.top() = tan(res.top());
-          break;
-        case 'ctg':
-          res.top() = 1/tan(res.top());
-          break;
-        case '√':
-          res.top() = sqrt(res.top());
-          break;
-        case '√3':
-          res.top() = cbrt(res.top());
-          break;
+    } else if(in.front() == ';' || is_oper(in.front()) == true) {
+     if(minus == true) {
+        minus = false;
+        res.top() = -res.top();
       }
-      op = true;
-      in.pop();
+     if(in.front() == ';') {
+        res.push(0.0);
+        in.pop();
+      } else if(res.size() > 1) {
+       temp = res.top();
+        res.pop();
+        switch(in.front()) {
+          case '+':
+           res.top() += temp;
+            break;
+          case '-':
+           res.top() -= temp;
+            break;
+          case '*':
+            res.top() *= temp;
+            break;
+          case '/':
+           res.top() /= temp;
+           break;
+          case '^':
+           res.top() = pow(res.top(), temp);
+            break;
+         case 'sin':
+            res.top() = sin(res(top));
+            break;
+          case 'cos':
+            res.top() = cos(res.top());
+            break;
+          case 'tan':
+            res.top() = tan(res.top());
+            break;
+          case 'ctg':
+            res.top() = 1/tan(res.top());
+            break;
+          case '√':
+            res.top() = sqrt(res.top());
+            break;
+          case '√3':
+            res.top() = cbrt(res.top());
+            break;
+        }
+        op = true;
+        in.pop();
     }
   }
 }
