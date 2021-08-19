@@ -113,129 +113,104 @@ double calc(queue<char> in) {
   op = false;
   size_t fl = 0;
   double temp;
-
   res.push(0.0);
-  while(in.empty() != true)
-  {
-    if(in.front() == '_')
-    {
+  while (in.empty() != true) {
+    if (in.front() == '_') {
       minus = true;
       in.pop();
-    }
-    else if(is_digit(in.front()) == true)
-    {
-      if(op == true) {
+    } else if(is_digit(in.front()) == true) {
+      if (op == true) {
         res.push(0.0); op = false;
       }
-      while(in.empty() != true && is_digit(in.front()) == true)
-      {
-        if((in.front() == '0' && res.top() == 0.0) == false)
-        if(fl == 0)
-        {
-          res.top() = res.top() * 10 + in.front() - 48;
-        }
-        else
-        {
-          temp = in.front() - 48;
-          for(size_t i = 0; i < fl; i++)
-          temp /= 10;
-          res.top() += temp;
-          fl++;
+      while (in.empty() != true && is_digit(in.front()) == true) {
+        if ((in.front() == '0' && res.top() == 0.0) == false) {
+          if(fl == 0) {
+            res.top() = res.top() * 10 + in.front() - 48;
+          } else {
+            temp = in.front() - 48;
+            for (size_t i = 0; i < fl; i++) {
+              temp /= 10;
+              res.top() += temp;
+              fl++;
+            }
+          }
         }
       }
       in.pop();
-      if(in.empty() != true && in.front() == '.')
-      {
+      if (in.empty() != true && in.front() == '.') {
         fl = 1;
         in.pop();
       }
     }
     fl = 0;
-  }
-  else if(is_var(in.front()) == true)
-  {
+  } else if(is_var(in.front()) == true) {
     if(op == true) {
       res.push(0.0); op = false;
     }
     var_buf.clear();
-    do
-    {
-
+    do {
       var_buf.push_back(in.front());
       in.pop();
-    }while(in.empty() != true && is_var(in.front()) == true);
-
-    if(mem.find(var_buf) != mem.end())
-    {
+    } while(in.empty() != true && is_var(in.front()) == true);
+    if (mem.find(var_buf) != mem.end()) {
       res.top() = mem[var_buf];
-    }
-    else
-    {
+    } else {
       cout << "Please enter the variable \'" << var_buf << "\': ";
       cin >> res.top();
       mem[var_buf] = res.top();
     }
-  }
-  else if(in.front() == ';' ||
-    is_oper(in.front()) == true)
-  {
-    if(minus == true)
-    {
+  } else if(in.front() == ';' || is_oper(in.front()) == true) {
+    if(minus == true) {
       minus = false;
       res.top() = -res.top();
     }
-    if(in.front() == ';')
-    {
+    if(in.front() == ';') {
       res.push(0.0);
       in.pop();
-    }
-    else if(res.size() > 1)
-    {
+    } else if(res.size() > 1) {
       temp = res.top();
       res.pop();
-      switch(in.front())
-      {
+      switch(in.front()) {
         case '+':
-        res.top() += temp;
-        break;
+          res.top() += temp;
+          break;
         case '-':
-        res.top() -= temp;
-        break;
+          res.top() -= temp;
+          break;
         case '*':
-        res.top() *= temp;
-        break;
+          res.top() *= temp;
+          break;
         case '/':
-        res.top() /= temp;
-        break;
+          res.top() /= temp;
+          break;
         case '^':
-        res.top() = pow(res.top(), temp);
-        break;
+          res.top() = pow(res.top(), temp);
+          break;
         case 'sin':
-        res.top() = sin(res(top));
-        break;
+          res.top() = sin(res(top));
+          break;
         case 'cos':
-        res.top() = cos(res.top());
-        break;
+          res.top() = cos(res.top());
+          break;
         case 'tan':
-        res.top() = tan(res.top());
-        break;
+          res.top() = tan(res.top());
+          break;
         case 'ctg':
-        res.top() = 1/tan(res.top());
-        break;
+          res.top() = 1/tan(res.top());
+          break;
         case '√':
-        res.top() = sqrt(res.top());
-        break;
+          res.top() = sqrt(res.top());
+          break;
         case '√3':
-        res.top() = cbrt(res.top());
-        break;
+          res.top() = cbrt(res.top());
+          break;
       }
       op = true;
       in.pop();
     }
   }
 }
-if(res.size() > 1)
-{
+if (res.size() > 1) {
   cout << "something went wrong!";
   while(res.empty() != true) {
     cout << res.top() << ' ';
@@ -245,8 +220,6 @@ if(res.size() > 1)
 }
 return res.top();
 }
-
-
 
 
 int four () {
