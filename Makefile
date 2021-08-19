@@ -2,8 +2,8 @@ CPP=g++
 SRC=main.cpp calc.cpp keygen.cpp conv.cpp modules.cpp
 OBJ=$(SRC:.cpp=.o)
 OBJDBG=$(SRC:.cpp=dbg.o)
-CFLAGS=-O2 -s -flto
-CFLAGSDBG=-Og -g
+CFLAGS=-O2 -s -flto -c
+CFLAGSDBG=-Og -g -c
 LDFLAGS=
 release: $(OBJ)
 	$(CPP) $(LDFLAGS) $(OBJ) -o $@
