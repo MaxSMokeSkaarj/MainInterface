@@ -3,28 +3,33 @@
 #include <string>
 #include <cmath>
 
+using namespace std;
+
 //preinit
-int stringProcessor(std::string example);
+queue<char> to_revpol(const string& in);
+double calc(queue<char> in);
 
 int calc() {
   
   while (true) {
-    std::cout << "MainInterface v1.6 by MaxSMoke\n";
-    std::cout << "Input a mathematical example...\nType 'e' to exit\n";
-    std::string choice, exitChoice;
-    getline(std::cin, choice);
+    cout << "MainInterface v1.6 by MaxSMoke\n";
+    cout << "Input a mathematical example...\nType 'e' to exit\n";
+    string choice, exitChoice;
+    queue<chat> gen;
+    getline(cin, choice);
     if (choice == "E" || choice == "e") {
-      std::cout << "Exit? y/N\n";
-      getline(std::cin, exitChoice);
+      cout << "Exit? y/N\n";
+      getline(cin, exitChoice);
       if (exitChoice == "y" || exitChoice == "Y") {
         return 0;
       } else if (exitChoice == "N" || exitChoice == "n") {
-        std::cout << "Aborting...\n";
+        cout << "Aborting...\n";
       } else {
-        std::cout << "Error 201\n";
+        cout << "Error 201\n";
       }
     };
-    stringProcessor(choice);
+    gen = to_revpol(choice);
+    cout << calc(gen) << endl;
   }
   return 0;
 }
