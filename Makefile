@@ -4,9 +4,9 @@ CFLAGS=-O2 -s -flto -c
 CFLAGSDBG=-Og -g -c
 LDFLAGS:=
 release: MI.o
-$(CPP) $(LDFLAGS) MI.o -o MI
+	$(CPP) $(LDFLAGS) MI.o -o MI
 debug: MIdbg.o
-$(CPP) $(LDFLAG) MIdbg.o -o MIdbg
+	$(CPP) $(LDFLAG) MIdbg.o -o MIdbg
 .o: $(SRC)
 	$(CPP) $(CFLAGS) $(SRC) -o MI.o
 dbg.o: $(SRC)
