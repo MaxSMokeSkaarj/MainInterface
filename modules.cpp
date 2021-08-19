@@ -74,7 +74,7 @@ queue<char> to_revpol(const string& in) {
           gen.push(';');
         } else if (((stk.empty() != true && stk.top() == '(') || gen.empty() == true) && i == '-') {
           gen.push('_');
-        {
+        }
         if (gen.back() != '_') {
           stk.push(i);
         }
