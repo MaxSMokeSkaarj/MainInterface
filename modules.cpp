@@ -10,8 +10,6 @@ structure*/
 
 using namespace std;
 
-
-
 int priority(char& input) {
   if (input == '+' || input == '-') {
     return 1;
@@ -29,6 +27,7 @@ int priority(char& input) {
 bool is_digital(char& input) {
   return input >= 0;
 }
+
 bool is_variable(char& input) {
   return ((input >= 'a' && input <= 'z') || (input >= 'A' && input <= 'Z'));
 }
@@ -220,17 +219,17 @@ double calc(queue<char> in) {
 return res.top();
 }
 
-
 int four () {
   cout << "4-numberic code: " << 1000 + rand() % 1000 << std::endl;
 return 0;
 }
+
 int six () {
   cout << "6-numberic code: " << 100000 + rand() % 100000 << std::endl;
 return 0;
 }
+
 int eight () {
   cout << "8-numberic code: " << 10000000 + rand() % 10000000 << std::endl;
 return 0;
 }
-
