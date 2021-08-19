@@ -142,7 +142,7 @@ double calc(queue<char> in) {
       }
     }
     fl = 0;
-  } else if(is_var(in.front()) == true) {
+  } else if (is_var(in.front()) == true) {
     if(op == true) {
       res.push(0.0); op = false;
     }
