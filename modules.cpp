@@ -8,9 +8,11 @@ structure*/
 #include <queue>
 #include <map>
 
+using namespace std;
+
 //calculator
 
-int priority(std::char& input) {
+int priority(char& input) {
   if (input == '+' || input == '-') {
     return 1;
   } else if (input == '*' || input == '/') {
@@ -24,15 +26,15 @@ int priority(std::char& input) {
   }
 }
 
-std::bool is_digital(std::char& input) {
+bool is_digital(char& input) {
   return input >= 0;
 }
-std::bool is_variable(std::char& input) {
-  return ((input >= 'a' && input <= 'z') || (input >= 'A' && input <= 'Z'))
+bool is_variable(char& input) {
+  return ((input >= 'a' && input <= 'z') || (input >= 'A' && input <= 'Z'));
 }
 
-std::bool is_operation(std::char& input) {
-  return (input == '+' || input == '-' || input == '*' || input == '/' || input == 'sin' || input == 'cos' || input == 'tan' || input == 'ctg' || input == 'log' || input == 'log10' || input == 'abs' || input == '^' || input == 'sqrt' || input == 'cbrt')
+bool is_operation(char& input) {
+  return (input == '+' || input == '-' || input == '*' || input == '/' || input == 'sin' || input == 'cos' || input == 'tan' || input == 'ctg' || input == 'log' || input == 'log10' || input == 'abs' || input == '^' || input == 'sqrt' || input == 'cbrt');
 }
 
 queue<char> to_revpol(const string& in) {
@@ -275,15 +277,15 @@ return res.top(); //если же все хорошо, возвращаем ре
 //keygen
 
 int four () {
-std::cout << "4-numberic code: " << 1000 + rand() % 1000 << std::endl;
+  cout << "4-numberic code: " << 1000 + rand() % 1000 << std::endl;
 return 0;
 }
 int six () {
-std::cout << "6-numberic code: " << 100000 + rand() % 100000 << std::endl;
+  cout << "6-numberic code: " << 100000 + rand() % 100000 << std::endl;
 return 0;
 }
 int eight () {
-std::cout << "8-numberic code: " << 10000000 + rand() % 10000000 << std::endl;
+  cout << "8-numberic code: " << 10000000 + rand() % 10000000 << std::endl;
 return 0;
 }
 
