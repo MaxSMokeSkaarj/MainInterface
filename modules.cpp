@@ -35,9 +35,9 @@ std::bool is_operation(std::char& input) {
   return (input == '+' || input == '-' || input == '*' || input == '/' || input == 'sin' || input == 'cos' || input == 'tan' || input == 'ctg' || input == 'log' || input == 'log10' || input == 'abs' || input == '^' || input == 'sqrt' || input == 'cbrt')
 }
 
-queue < char > to_revpol(const string& in) {
-  stack < char > stk; //создаем стак для хранения временных операция
-  queue < char > gen; //создаем очередь, куда все будем пихать
+queue<char> to_revpol(const string& in) {
+  stack<char> stk; //создаем стак для хранения временных операция
+  queue<char> gen; //создаем очередь, куда все будем пихать
   bool clbr = false;
   //for(auto i : in)//идем по строке
   char i;
@@ -130,10 +130,9 @@ queue < char > to_revpol(const string& in) {
   return gen; //и возвращаем результат
 }
 
-double calc(queue < char > in) {
-  stack < double > res; //временное хранилище значений
-  map < string,
-  double > mem; //чтобы дважды не запрашивать одну и ту же переменную
+double calc(queue<char> in) {
+  stack<double> res; //временное хранилище значений
+  map<string,double> mem; //чтобы дважды не запрашивать одну и ту же переменную
   string var_buf; //буфер строки при для переменных
   bool minus = false,
   op = false; //флаги на минус, либо на оперцию
@@ -235,6 +234,25 @@ double calc(queue < char > in) {
         break;
         case '^':
         res.top() = pow(res.top(), temp);
+        break;
+        case 'sin':
+        res.top() = sin(res(top));
+        break;
+        case 'cos':
+        res.top() = cos(res.top());
+        break;
+        case 'tan':
+        res.top() = tan(res.top());
+        break;
+        case 'ctg':
+        res.top() = 1/tan(res.top());
+        break;
+        case '√':
+        res.top() = sqrt(res.top());
+        break;
+        case '√3':
+        res.top() = cbrt(res.top());
+        break;
       }
       op = true; //ставим флаг операции
       in.pop(); //убираем символ операции из очереди
