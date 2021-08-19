@@ -9,9 +9,9 @@ release: $(OBJ)
 	$(CPP) $(LDFLAGS) $(OBJ) -o $@
 debug: $(OBJDBG)
 	$(CPP) $(LDFLAG) $(OBJDBG) -o $@
-.o: $(SRC)
-	$(CPP) $(CFLAGS) $< -o $<$@
-dbg.o: $(SRC)
-	$(CPP) $(CFLAGSDBG) $< -o $<$@
+cpp.o: $(SRC)
+	$(CPP) $(CFLAGS) $< -o $<.o
+cppdbg.o: $(SRC)
+	$(CPP) $(CFLAGSDBG) $< -o $<dbg.o
 clean:
 	rm -rf *.o release debug
