@@ -4,119 +4,102 @@ structure*/
 #include <cmath>
 #include <cstdlib>
 #include <string>
-#include <sstream>
+#include <stack>
+#include <queue>
+#include <map>
 
 //calculator
 
-int MathCore(std::string arr[]) {
-  std::string a = arr[0];
-  std::string b = arr[1];
-  std::string c = arr[2];
-  if (b == "+") {
-    std::stringstream ssa(a);
-    std::stringstream ssc(c);
-    double da = 0.0;
-    double dc = 0.0;
-    ssa >> da;
-    ssc >> dc;
-    std::cout << a + " + " + c + " = " << da + dc << std::endl;
-  } else if(b == "-") {
-    std::stringstream ssa(a);
-    std::stringstream ssc(c);
-    double da = 0.0;
-    double dc = 0.0;
-    ssa >> da;
-    ssc >> dc;
-    std::cout << a + " - " + c + " = " << da - dc << std::endl;
-  } else if(b == "*") {
-    std::stringstream ssa(a);
-    std::stringstream ssc(c);
-    double da = 0.0;
-    double dc = 0.0;
-    ssa >> da;
-    ssc >> dc;
-    std::cout << a + " * " + c + " = " << da * dc << std::endl;
-  } else if(b == "/") {
-    std::stringstream ssa(a);
-    std::stringstream ssc(c);
-    double da = 0.0;
-    double dc = 0.0;
-    ssa >> da;
-    ssc >> dc;
-    std::cout << a + " / " + c + " = " << da / dc << std::endl;
-  } else if(a == "sin") {
-    std::stringstream ssb(b);
-    double db = 0.0;
-    ssb >> db;
-    std::cout << "Sinus " + b + " = " << sin(db) << std::endl;
-  } else if(a == "cos") {
-    std::stringstream ssb(b);
-    double db = 0.0;
-    ssb >> db;
-    std::cout << "Cosinus " + b + " = " << cos(db) << std::endl;
-  } else if(a == "tan") {
-    std::stringstream ssb(b);
-    double db = 0.0;
-    ssb >> db;
-    std::cout << "Tangent " + b + " = " << tan(db) << std::endl;
-  } else if(a == "log") {
-    std::stringstream ssb(b);
-    double db = 0.0;
-    ssb >> db;
-    std::cout << "Logarithm " + b + " = " << log(db) << std::endl;
-  } else if (a == "ctg") {
-    std::stringstream ssb(b);
-    double db = 0.0;
-    ssb >> db;
-    std::cout << "Cotangent " + b + " = " << 1/tan(db) << std::endl;
-  } else if (a == "sqrt" || a == "√") {
-    std::stringstream ssb(b);
-    double db = 0.0;
-    ssb >> db;
-    std::cout << "Square root " + b + " = " << sqrt(db) << std::endl;
-  } else if (b == "^" || b == "in") {
-    std::stringstream ssa(a);
-    std::stringstream ssc(c);
-    double da = 0.0;
-    double dc = 0.0;
-    ssa >> da;
-    ssc >> dc;
-    std::cout << a + " ^ " + c + " = " << pow(da, dc) << std::endl;
-  } else if (a == "cbrt" || a == "√^3") {
-    std::stringstream ssb(b);
-    double db = 0.0;
-    ssb >> db;
-    std::cout << "Cube root " + b + " = " << cbrt(db) << std::endl;
-  } else if ((a == "|" && c == "|") || a == "abs") {
-    std::stringstream ssb(b);
-    double db = 0.0;
-    ssb >> db;
-    std::cout << "Module " + b + " = " << abs(db) << std::endl;
-  } else if (a == "log10") {
-    std::stringstream ssb(b);
-    double db = 0.0;
-    ssb >> db;
-    std::cout << "Decimal logarithm " + b + " = " << log10(db) << std::endl;
+int priority(std::char& input) {
+  if (input == '+' || input == '-') {
+    return 1;
+  } else if (input == '*' || input == '/') {
+    return 2;
+  } else if (input == 'sin' || input == 'cos' || input == 'tan' || input == 'ctg' || input == 'log' || input == 'log10') {
+    return 3;
+  } else if (input == 'abs' || input == 'pow' || input == 'sqrt' || input == 'cbrt') {
+    return 4;
   } else {
-    std::cout << "Error 202\n";
-  };
-  return 0;
-};
+    return 0;
+  }
+}
 
-int stringProcessor(std::string line) {
-  std::string s = line;
-  std::istringstream iss(s);
-  int i = 0;
-  std::string arr[4];
-  do {
-    std::string subs;
-    iss >> subs;
-    arr[i] = subs;
-    i++;
-  } while (iss);
-  MathCore(arr);
-  return 0;
-};
+std::bool is_digital(std::char& input) {
+  return input >= 0;
+}
+std::bool is_variable(std::char& input) {
+  return ((input >= 'a' && input <= 'z') || (input >= 'A' && input <= 'Z'))
+}
+
+std::bool is_operation(std::char& input) {
+  return (input == '+' || input == '-' || input == '*' || input == '/' || input == 'sin' || input == 'cos' || input == 'tan' || input == 'ctg' || input == 'log' || input == 'log10' || input == 'abs' || input == 'pow' || input == 'sqrt' || input == 'cbrt')
+}
+
+queue<char> to_reversepolishnotation(const string& input) {
+  stack<char> stk;
+  queue<char> gen;
+  bool clbr = false;
+  char i;
+  for(int j = 0; j < in.size(); j++) {
+    i = in[j];
+    if(i == '.' || i == ',') {
+    gen.push(i);
+    } else if(is_digit(i)) {
+      gen.push(i);
+    } else if(is_var(i)) {
+      if(gen.empty() != true && is_digit(gen.back()) == true) {
+        stk.push('*'); gen.push(';');
+      }
+      gen.push(i);
+    }
+    else if(is_oper(i)) {
+      if(stk.empty() != true) {
+        if(prior(i) == prior(stk.top())) {
+          gen.push(stk.top());
+          stk.top() = i;
+        } else if(prior(i) < prior(stk.top())) {
+          while(stk.empty() != true && stk.top() != '(') {
+            gen.push(stk.top());
+            stk.pop();
+          }
+          stk.push(i);
+        }
+      }
+      if(stk.empty() == true || prior(i) > prior(stk.top())) {
+        if(gen.empty() != true && is_digit(gen.back()) || is_var(gen.back())) {
+          gen.push(';');
+        } else if(((stk.empty() != true && stk.top() == '(') || gen.empty() == true) && i == '-') {
+          gen.push('_');
+        }
+        if(gen.back() != '_') {
+          stk.push(i);
+        }
+      }
+    } else if(i == '(') {
+      if(gen.empty() != true && (is_digit(gen.back()) || is_var(gen.back()))) {
+        gen.push(';');
+        stk.push('*');
+      }
+      stk.push(i);
+    } else if(i == ')') {
+      clbr = true;
+      while(stk.empty() != true && stk.top() != '(') {
+        gen.push(stk.top());
+        stk.pop();
+      }
+      if(stk.empty() != true) {
+      stk.pop();
+      } else
+      throw "WRONG INPUT! Missing (";
+    }
+  }
+
+  while(stk.empty() != true) {
+    gen.push(stk.top());
+    stk.pop();
+  }
+  return gen;
+}
 
 //keygen
 
