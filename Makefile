@@ -1,15 +1,16 @@
 CPP=g++
 SRC=main.cpp calc.cpp keygen.cpp conv.cpp modules.cpp
 OBJ=$(SRC:.cpp=.o)
-CFLAGSRLS=-O2 -s -flto -c
+OBJDBG=$(SRC:.cpp=dbg.o)
+CFLAGS=-O2 -s -flto -c
 CFLAGSDBG=-Og -g -c
 LDFLAGS=
-release: $(releaseObjects)
+release: $(OBJ)
 	$(CPP) $(LDFLAGS) $(OBJ) -o $@
-debug: $(debugObjects)
-	$(CPP) $(LDFLAGS) $(OBJ) -o $@
+debug: $(OBJDBG)
+	$(CPP) $(LDFLAGS) $(OBJDBG) -o $@
 releaseObjects: $(SRC)
-	$(CPP) $(CFLAGSRLS) $(SRC)
+	$(CPP) $(CFLAGS) $(SRC)
 debugObjects: $(SRC)
 	$(CPP) $(CFLAGSDBG) $(SRC)
 clean:
