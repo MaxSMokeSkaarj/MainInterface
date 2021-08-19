@@ -209,15 +209,14 @@ double calc(queue<char> in) {
       in.pop();
     }
   }
-}
-if (res.size() > 1) {
-  cout << "something went wrong!";
-  while(res.empty() != true) {
-    cout << res.top() << ' ';
-    res.pop();
+  if (res.size() > 1) {
+    cout << "something went wrong!";
+    while(res.empty() != true) {
+      cout << res.top() << ' ';
+      res.pop();
+    }
+    return 0.0;
   }
-  return 0.0;
-}
 return res.top();
 }
 
