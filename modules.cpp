@@ -10,7 +10,7 @@ structure*/
 
 using namespace std;
 
-int priority(char& input) {
+int prior(char& input) {
   if (input == '+' || input == '-') {
     return 1;
   } else if (input == '*' || input == '/') {
@@ -24,15 +24,15 @@ int priority(char& input) {
   }
 }
 
-bool is_digital(char& input) {
+bool is_digit(char& input) {
   return input >= 0;
 }
 
-bool is_variable(char& input) {
+bool is_var(char& input) {
   return ((input >= 'a' && input <= 'z') || (input >= 'A' && input <= 'Z'));
 }
 
-bool is_operation(char& input) {
+bool is_oper(char& input) {
   return (input == '+' || input == '-' || input == '*' || input == '/' || input == 'sin' || input == 'cos' || input == 'tan' || input == 'ctg' || input == 'log' || input == 'log10' || input == 'abs' || input == '^' || input == 'sqrt' || input == 'cbrt');
 }
 
