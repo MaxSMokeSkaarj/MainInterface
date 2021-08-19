@@ -16,7 +16,7 @@ int calc() {
     cout << "MainInterface v1.6 by MaxSMoke\n";
     cout << "Input a mathematical example...\nType 'e' to exit\n";
     string choice, exitChoice;
-    queue<chat> gen;
+    queue<char> gen;
     getline(cin, choice);
     if (choice == "E" || choice == "e") {
       cout << "Exit? y/N\n";
