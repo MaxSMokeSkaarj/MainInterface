@@ -1,7 +1,7 @@
 CPP=g++
 SRC=main.cpp calc.cpp keygen.cpp conv.cpp modules.cpp
-OBJ=$(SRC:.cpp=.o)
-OBJDBG=$(SRC:.cpp=.dbg.o)
+OBJ=$(SRC:.cpp=.cpp.o)
+OBJDBG=$(SRC:.cpp=.cppdbg.o)
 CFLAGS=-O2 -s -flto -c
 CFLAGSDBG=-Og -g -c
 LDFLAGS=
