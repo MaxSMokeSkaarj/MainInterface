@@ -208,6 +208,7 @@ double calc(queue<char> in) {
       in.pop();
     }
   }
+}
   if (res.size() > 1) {
     cout << "something went wrong!";
     while(res.empty() != true) {
