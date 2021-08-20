@@ -9,7 +9,7 @@ using namespace std;
 //preinit
 queue<char> to_revpol(const string& in);
 double calc(queue<char> in);
-template<class T> ostream& operator<<(ostream& out, queue < T > cs)
+template<class T> ostream& operator<<(ostream& out, queue < T > cs);
 int end();
 
 int calc() {
