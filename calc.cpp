@@ -9,6 +9,7 @@ using namespace std;
 //preinit
 queue<char> to_revpol(const string& in);
 double calc(queue<char> in);
+int end();
 
 int calc() {
   
