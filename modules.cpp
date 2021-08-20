@@ -1,7 +1,7 @@
 /*Its all function file from module
 structure*/
 #include <iostream>
-#include <cmath>
+#include <math.h>
 #include <cstdlib>
 #include <string>
 #include <stack>
