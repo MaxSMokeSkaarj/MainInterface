@@ -185,7 +185,7 @@ double calc(queue<char> in) {
           res.top() = pow(res.top(), temp);
           break;
           case 'sin':
-          res.top() = sin(res(top()));
+          res.top() = sin(res.top());
           break;
           case 'cos':
           res.top() = cos(res.top());
