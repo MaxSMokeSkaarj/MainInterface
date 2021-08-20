@@ -10,6 +10,11 @@ structure*/
 
 using namespace std;
 
+int end() {
+  cout << "\nEND\n"; _getch(); return 0;
+  
+}
+
 int prior(char& in) {
   if(in == '+' || in == '-')
   return 1;
