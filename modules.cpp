@@ -11,7 +11,8 @@ structure*/
 using namespace std;
 
 int end() {
-  cout << "\nEND\n"; _getch(); return 0;
+  string in;
+  cout << "\nEND\n"; getline(cin, in); return 0;
   
 }
 
