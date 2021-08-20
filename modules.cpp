@@ -185,7 +185,7 @@ double calc(queue<char> in) {
           res.top() = pow(res.top(), temp);
           break;
           case 'sin':
-          res.top() = sin(res(top));
+          res.top() = sin(res(top()));
           break;
           case 'cos':
           res.top() = cos(res.top());
@@ -196,10 +196,10 @@ double calc(queue<char> in) {
           case 'ctg':
           res.top() = 1/tan(res.top());
           break;
-          case '√':
+          case 'sqrt':
           res.top() = sqrt(res.top());
           break;
-          case '√3':
+          case 'cbrt':
           res.top() = cbrt(res.top());
           break;
         }
