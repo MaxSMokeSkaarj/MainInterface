@@ -29,10 +29,11 @@ int calc() {
       } else {
         cout << "Error 201\n";
       }
-    };
-    gen = to_revpol(choice);
-    cout << calc(gen) << endl;
-    return end();
+    } else {
+      gen = to_revpol(choice);
+      cout << calc(gen) << endl;
+      return end();
+    }
   }
   return 0;
 }
