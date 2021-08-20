@@ -218,8 +218,7 @@ double calc(queue<char> in) {
   return res.top();
 }
 
-template < class T >
-ostream& operator<<(ostream& out, queue < T > cs) {
+template<class T> ostream& operator<<(ostream& out, queue < T > cs) {
   while(cs.empty() != true) {
     out << cs.front();
     cs.pop();
