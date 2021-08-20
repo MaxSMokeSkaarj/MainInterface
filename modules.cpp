@@ -10,8 +10,7 @@ structure*/
 
 using namespace std;
 
-int prior(char& in)
-{
+int prior(char& in) {
   if(in == '+' || in == '-')
   return 1;
   else if(in == '*' || in == '/')
@@ -22,13 +21,11 @@ int prior(char& in)
   return 0;
 }
 
-bool is_digit(char& in)
-{
+bool is_digit(char& in) {
   return (in >= '0' && in <= '9');
 }
 
-bool is_var(char& in)
-{
+bool is_var(char& in) {
   return ((in >= 'a' && in <= 'z') ||
     (in >= 'A' && in <= 'Z'));
 }
@@ -150,7 +147,6 @@ double calc(queue<char> in) {
           fl = 1;
           in.pop();
         }
-      }
       fl = 0;
     } else if(is_var(in.front()) == true) {
       if(op == true) {
