@@ -140,72 +140,74 @@ double calc(queue<char> in) {
         fl = 1;
         in.pop();
       }
-    fl = 0;
-  } else if (is_var(in.front()) == true) {
-    if(op == true) {
-      res.push(0.0); op = false;
-    }
-    var_buf.clear();
-    do {
-      var_buf.push_back(in.front());
-      in.pop();
-    } while(in.empty() != true && is_var(in.front()) == true);
-    if (mem.find(var_buf) != mem.end()) {
-      res.top() = mem[var_buf];
-    } else {
-      cout << "Please enter the variable \'" << var_buf << "\': ";
-      cin >> res.top();
-      mem[var_buf] = res.top();
+      fl = 0;
+    } else if (is_var(in.front()) == true) {
+      if(op == true) {
+        res.push(0.0); op = false;
+      }
+      var_buf.clear();
+      do {
+        var_buf.push_back(in.front());
+        in.pop();
+      } while(in.empty() != true && is_var(in.front()) == true);
+      if (mem.find(var_buf) != mem.end()) {
+        res.top() = mem[var_buf];
+      } else {
+        cout << "Please enter the variable \'" << var_buf << "\': ";
+        cin >> res.top();
+        mem[var_buf] = res.top();
+      }
     } else if(in.front() == ';' || is_oper(in.front()) == true) {
-     if(minus == true) {
+      if(minus == true) {
         minus = false;
         res.top() = -res.top();
       }
-     if(in.front() == ';') {
+      if(in.front() == ';') {
         res.push(0.0);
         in.pop();
       } else if(res.size() > 1) {
-       temp = res.top();
+        temp = res.top();
         res.pop();
         switch(in.front()) {
           case '+':
-           res.top() += temp;
-            break;
+          res.top() += temp;
+          break;
           case '-':
-           res.top() -= temp;
-            break;
+          res.top() -= temp;
+          break;
           case '*':
-            res.top() *= temp;
-            break;
+          res.top() *= temp;
+          break;
           case '/':
-           res.top() /= temp;
-           break;
+          res.top() /= temp;
+          break;
           case '^':
-           res.top() = pow(res.top(), temp);
-            break;
-         case 'sin':
-            res.top() = sin(res(top));
-            break;
+          res.top() = pow(res.top(), temp);
+          break;
+          case 'sin':
+          res.top() = sin(res(top));
+          break;
           case 'cos':
-            res.top() = cos(res.top());
-            break;
+          res.top() = cos(res.top());
+          break;
           case 'tan':
-            res.top() = tan(res.top());
-            break;
+          res.top() = tan(res.top());
+          break;
           case 'ctg':
-            res.top() = 1/tan(res.top());
-            break;
+          res.top() = 1/tan(res.top());
+          break;
           case '√':
-            res.top() = sqrt(res.top());
-            break;
+          res.top() = sqrt(res.top());
+          break;
           case '√3':
-            res.top() = cbrt(res.top());
-            break;
+          res.top() = cbrt(res.top());
+          break;
         }
         op = true;
         in.pop();
+      }
     }
-}
+  }
   if (res.size() > 1) {
     cout << "something went wrong!";
     while(res.empty() != true) {
@@ -214,20 +216,20 @@ double calc(queue<char> in) {
     }
     return 0.0;
   }
-return res.top();
+  return res.top();
 }
 
 int four () {
   cout << "4-numberic code: " << 1000 + rand() % 1000 << std::endl;
-return 0;
+  return 0;
 }
 
 int six () {
   cout << "6-numberic code: " << 100000 + rand() % 100000 << std::endl;
-return 0;
+  return 0;
 }
 
 int eight () {
   cout << "8-numberic code: " << 10000000 + rand() % 10000000 << std::endl;
-return 0;
+  return 0;
 }
