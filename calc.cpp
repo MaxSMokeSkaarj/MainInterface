@@ -30,7 +30,6 @@ int calc() {
       }
     };
     gen = to_revpol(choice);
-    cout << gen[0] << endl;
     cout << calc(gen) << endl;
   }
   return 0;
