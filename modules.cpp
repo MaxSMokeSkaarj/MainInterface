@@ -140,7 +140,6 @@ double calc(queue<char> in) {
         fl = 1;
         in.pop();
       }
-    }
     fl = 0;
   } else if (is_var(in.front()) == true) {
     if(op == true) {
@@ -206,7 +205,6 @@ double calc(queue<char> in) {
         op = true;
         in.pop();
     }
-  }
 }
   if (res.size() > 1) {
     cout << "something went wrong!";
