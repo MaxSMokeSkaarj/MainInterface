@@ -10,10 +10,10 @@ structure*/
 
 using namespace std;
 
-int end() {
+/*int end() {
   string in;
   cout << "\nEND\n"; getline(cin, in); return 0;
-}
+}*/
 
 int prior (char& in) {
   if (in == '+' || in == '-') {
