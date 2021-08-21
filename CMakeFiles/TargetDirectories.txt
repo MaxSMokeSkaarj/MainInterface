@@ -1,0 +1,3 @@
+/data/data/com.termux/files/home/MainInterface/CMakeFiles/edit_cache.dir
+/data/data/com.termux/files/home/MainInterface/CMakeFiles/rebuild_cache.dir
+/data/data/com.termux/files/home/MainInterface/CMakeFiles/MI.dir

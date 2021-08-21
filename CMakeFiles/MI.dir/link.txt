@@ -1,0 +1,1 @@
+/data/data/com.termux/files/usr/bin/c++ -O2 -g -DNDEBUG CMakeFiles/MI.dir/main.cpp.o CMakeFiles/MI.dir/calc.cpp.o CMakeFiles/MI.dir/keygen.cpp.o CMakeFiles/MI.dir/conv.cpp.o CMakeFiles/MI.dir/modules.cpp.o -o MI 

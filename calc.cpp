@@ -6,14 +6,20 @@
 
 using namespace std;
 
+template<class T> ostream& operator<<(ostream& out, queue < T > cs) {
+  while (cs.empty() != true) {
+    out << cs.front();
+    cs.pop();
+  }
+  return out;
+}
+
 //preinit
 queue<char> to_revpol(const string& in);
 double calc(queue<char> in);
-//template<class T> ostream& operator<<(ostream& out, queue < T > cs);
 int end();
 
 int calc() {
-  
   while (true) {
     cout << "MainInterface v1.6 by MaxSMoke\n";
     cout << "Input a mathematical example...\nType 'e' to exit\n";
@@ -32,6 +38,7 @@ int calc() {
       }
     } else {
       gen = to_revpol(choice);
+      cout << gen << endl;
       cout << calc(gen) << endl;
       //return end();
     }

@@ -207,14 +207,6 @@ double calc (queue<char> in) {
   return res.top();
 }
 
-/*template<class T> ostream& operator<<(ostream& out, queue < T > cs) {
-  while (cs.empty() != true) {
-    out << cs.front();
-    cs.pop();
-  }
-  return out;
-}*/
-
 int four () {
   cout << "4-numberic code: " << 1000 + rand() % 1000 << std::endl;
   return 0;
@@ -229,3 +221,4 @@ int eight () {
   cout << "8-numberic code: " << 10000000 + rand() % 10000000 << std::endl;
   return 0;
 }
+
