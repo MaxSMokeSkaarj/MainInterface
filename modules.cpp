@@ -39,7 +39,7 @@ bool is_oper (char& in) {
   return (in == '+' || in == '-' || in == '*' || in == '/' || in == '^');
 }
 
-queue<char> to_revpol (const string& in) {
+queue<char> to_revpol (const string& in) { //беды с башкой
   stack<char> stk;
   queue<char> gen;
   bool clbr = false;
@@ -51,7 +51,7 @@ queue<char> to_revpol (const string& in) {
     } else if (is_digit(i)) {
       if ((gen.empty() != true && is_var(gen.back()) == true) || clbr == true) {
         stk.push('^');
-        gen.push(';');
+        //gen.push(';');
         clbr = false;
       }
       gen.push(i);
@@ -59,11 +59,11 @@ queue<char> to_revpol (const string& in) {
     else if (is_var(i)) {
       if (gen.empty() != true && is_digit(gen.back()) == true) {
         stk.push('*');
-        gen.push(';');
+        //gen.push(';');
       }
       gen.push(i);
     }
-    else if (is_oper(i)) {
+    else if (is_oper(i)) { //проблема тут. откуда ты тварь береш ';'?
       if (stk.empty() != true) {
         if (prior(i) == prior(stk.top())) {
           gen.push(stk.top());
