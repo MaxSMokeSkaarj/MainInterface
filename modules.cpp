@@ -50,13 +50,16 @@ queue<char> to_revpol (const string& in) {
     gen.push(i);
     } else if (is_digit(i)) {
       if ((gen.empty() != true && is_var(gen.back()) == true) || clbr == true) {
-        stk.push('^'); gen.push(';'); clbr = false;
+        stk.push('^');
+        gen.push(';');
+        clbr = false;
       }
       gen.push(i);
     }
     else if (is_var(i)) {
       if (gen.empty() != true && is_digit(gen.back()) == true) {
-        stk.push('*'); gen.push(';');
+        stk.push('*');
+        gen.push(';');
       }
       gen.push(i);
     }
