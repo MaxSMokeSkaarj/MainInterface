@@ -78,7 +78,7 @@ queue<char> to_revpol (const string& in) { //беды с башкой
       }
       if (stk.empty() == true || prior(i) > prior(stk.top())) {
         if (gen.empty() != true && is_digit(gen.back()) || is_var(gen.back())) {
-        gen.push(';');
+        //gen.push(';');
         } else if (((stk.empty() != true && stk.top() == '(') || gen.empty() == true) && i == '-') {
           gen.push('_');
           if (gen.back() != '_') {
@@ -88,7 +88,7 @@ queue<char> to_revpol (const string& in) { //беды с башкой
       }
     } else if (i == '(') {
       if (gen.empty() != true && (is_digit(gen.back()) || is_var(gen.back()))) {
-        gen.push(';');
+        //gen.push(';');
         stk.push('*');
       }
       stk.push(i);
