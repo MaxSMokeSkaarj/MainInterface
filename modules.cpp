@@ -28,7 +28,7 @@ int prior (char& in) {
 }
 
 bool is_digit (char& in) {
-  return (in >= '0'/*&& in <= '9'*/);
+  return (in >= '0' && in <= '9');
 }
 
 bool is_var (char& in) {
