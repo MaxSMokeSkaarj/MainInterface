@@ -1,5 +1,5 @@
 #include <iostream>
-#include "functions.h"
+#include "functions.hpp"
 
 void conv () {
 

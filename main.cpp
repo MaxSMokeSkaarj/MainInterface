@@ -1,5 +1,5 @@
 #include <iostream>
-#include "functions.h"
+#include "functions.hpp"
 
 int main() {
     while (true) {
@@ -29,6 +29,7 @@ int main() {
                     case 'n':
                     case 'N':
                     std::cout << "Aborting...\n";
+
                     break;
                 default:
                     std::cout << "Error 101\n";
