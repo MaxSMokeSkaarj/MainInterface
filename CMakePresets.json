@@ -1,0 +1,53 @@
+{
+  "version": 8,
+  "configurePresets": [
+    {
+      "name": "linux-debug",
+      "displayName": "Linux Debug",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/linux-debug",
+      "cacheVariables": { "CMAKE_BUILD_TYPE": "Debug" }
+    },
+    {
+      "name": "linux-release",
+      "displayName": "Linux Release",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/linux-release",
+      "cacheVariables": { "CMAKE_BUILD_TYPE": "Release" }
+    },
+    {
+      "name": "win64-debug",
+      "displayName": "Windows 64-bit debug (MinGW)",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/win64-debug",
+      "toolchainFile": "${sourceDir}/toolchains/mingw-w64-x86_64.cmake",
+      "cacheVariables": { "CMAKE_BUILD_TYPE": "Debug" }
+    },
+    {
+      "name": "win64-release",
+      "displayName": "Windows 64-bit Release (MinGW)",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/win64-release",
+      "toolchainFile": "${sourceDir}/toolchains/mingw-w64-x86_64.cmake",
+      "cacheVariables": { "CMAKE_BUILD_TYPE": "Release" }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "linux-debug",
+      "configurePreset": "linux-debug"
+    },
+    {
+      "name": "linux-release",
+      "configurePreset": "linux-release"
+    },
+    {
+      "name": "win64-debug",
+      "configurePreset": "win64-debug"
+    },
+    {
+      "name": "win64-release",
+      "configurePreset": "win64-release"
+    }
+  ]
+}
